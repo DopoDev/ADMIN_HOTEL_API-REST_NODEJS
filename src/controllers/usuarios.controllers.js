@@ -12,7 +12,7 @@ export const getUsers = async (req, res) =>{ //La función debe ser asincrona da
 export const getUser = async (req, res) =>{ //metodo async para realizar una consulta a la base de datos
   const { id } = req.params; //Obtiene el id del usuario y lo guarda en la variable en este caso id
   const { rows } = await pool.query('SELECT * FROM users WHERE id = $1', [id]); //hacemos la petición a la base de datos, teniendo en cuenta el id del usuario, la biblioteca lo llama con el id = $1 y luego se reemplaza con el parametro [id]
-  
+  console.log(id)
   if(rows.length === 0){
     return res.status(404).json({message: 'Usuario no encontrado'}); //Funcionalidad para definir que no se encontro ningún usuario con ese id, para esto se cambia el status a 404
   }

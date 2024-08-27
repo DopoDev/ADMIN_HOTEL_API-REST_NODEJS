@@ -1,6 +1,7 @@
 import express from "express";
 import {PORT} from "./config.js";
 import rutaUsuarios from './routes/usuarios.routes.js'
+import rutaHabitaciones from './routes/habitaciones.routes.js'
 //importamos morgan para ver las peticiones HTTP en consola
 import morgan from 'morgan';
 
@@ -13,8 +14,11 @@ app.use(morgan('dev'));
 //Middleware para manejar JSON
 app.use(express.json());
 
+//Rutas de la API
 //Ruta para las rutas de los usuarios
 app.use(rutaUsuarios);
+//Ruta para las routes de las habitaciones
+app.use(rutaHabitaciones);
 
 //Iniciando el servidor
 app.listen(PORT);
