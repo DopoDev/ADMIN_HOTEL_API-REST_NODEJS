@@ -27,6 +27,9 @@ ALTER TABLE
 ALTER TABLE
     "Clientes" ADD CONSTRAINT "clientes_email_unique" UNIQUE("email");
 
+ALTER TABLE "Clientes"
+ALTER COLUMN "fecha_registro" SET DEFAULT CURRENT_DATE;
+
 CREATE TABLE "Servicios"(
     "id_servicio" SERIAL NOT NULL,
     "nombre_servicio" VARCHAR(255) NOT NULL,
