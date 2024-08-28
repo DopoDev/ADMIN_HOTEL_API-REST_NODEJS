@@ -1,6 +1,6 @@
 {
-  "name": "usuarios",
-  "version": "1.0.0",
+  "name": "api_rest_adminhotel",
+  "version": "0.0.2",
   "main": "index.js",
   "type": "module",
   "scripts": {

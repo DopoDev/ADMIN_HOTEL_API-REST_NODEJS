@@ -3,6 +3,7 @@ import {PORT} from "./config.js";
 import rutaUsuarios from './routes/usuarios.routes.js'
 import rutaHabitaciones from './routes/habitaciones.routes.js'
 import rutaClientes from './routes/clientes.routes.js'
+import rutaEmpleados from './routes/empleados.routes.js'
 
 //importamos morgan para ver las peticiones HTTP en consola
 import morgan from 'morgan';
@@ -23,6 +24,8 @@ app.use(rutaUsuarios);
 app.use(rutaHabitaciones);
 //Ruta para los clientes
 app.use(rutaClientes);
+//Ruta para los empleados
+app.use(rutaEmpleados);
 
 //Iniciando el servidor
 app.listen(PORT);
