@@ -7,19 +7,19 @@ const router = Router();
 //Definir todas las rutas
 
 //Obtener un usuario 
-router.get('/clientes/:id', getCliente);
+router.get('/api/clientes/:id', getCliente);
 
 //Obtener todos los usuaros
-router.get('/clientes', getClientes);
+router.get('/api/clientes', getClientes);
 
 //agregar un nuevo cliente
-router.post('/clientes', createCliente);
+router.post('/api/clientes', createCliente);
 
 //Actualizar dato de cliente
-router.put('/clientes/:id', updateCliente);
+router.put('/api/clientes/:id', updateCliente);
 
 //Eliminar un cliente
-router.delete('/clientes/:id', deleteCliente);
+router.delete('/api/clientes/:id', deleteCliente);
 
 
 export default router;

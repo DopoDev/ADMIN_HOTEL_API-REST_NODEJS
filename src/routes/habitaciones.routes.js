@@ -5,21 +5,21 @@ import { createHabitacion, deleteHabitacion, getHabitacion, getHabitaciones, upd
 const router = Router(); 
 
 //Obtener todas las habitaciones
-router.get('/habitaciones', getHabitaciones);
+router.get('/api/habitaciones', getHabitaciones);
 
 //Obtener una sola habitación
-router.get('/habitaciones/:id', getHabitacion); 
+router.get('/api/habitaciones/:id', getHabitacion); 
 
 //Agregar una nueva habitación
-router.post('/habitaciones', createHabitacion);
+router.post('/api/habitaciones', createHabitacion);
 
 //Cambiar estado de una habitación
-router.put('/habitaciones/:id', updateEstadoHabitacion);
+router.put('/api/habitaciones/:id', updateEstadoHabitacion);
 
 //Cambiar toda la información de una habitación
-router.put('/habitacionesInfo/:id', updateHabitacion);
+router.put('/api/habitacionesInfo/:id', updateHabitacion);
 
 //eliminar una habitacion
-router.delete('/habitaciones/:id', deleteHabitacion);
+router.delete('/api/habitaciones/:id', deleteHabitacion);
 
 export default router;

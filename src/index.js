@@ -1,5 +1,6 @@
 import express from "express";
 import {PORT} from "./config.js";
+import cors from 'cors';
 import rutaUsuarios from './routes/usuarios.routes.js'
 import rutaHabitaciones from './routes/habitaciones.routes.js'
 import rutaClientes from './routes/clientes.routes.js'
@@ -16,6 +17,9 @@ app.use(morgan('dev'));
 
 //Middleware para manejar JSON
 app.use(express.json());
+
+//Middleware para CORS
+app.use(cors());
 
 //Rutas de la API
 //Ruta para las rutas de los usuarios

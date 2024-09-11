@@ -5,18 +5,18 @@ const router = Router();
 
 //Agragamos las rutas
 //Traer todos los empleados
-router.get('/empleados', getEmpleados);
+router.get('/api/empleados', getEmpleados);
 
 //Traer un solo empleado
-router.get('/empleados/:id', getEmpleado); 
+router.get('/api/empleados/:id', getEmpleado); 
 
 //Agregar un nuevo empleado 
-router.post('/empleados', createEmpleado);
+router.post('/api/empleados', createEmpleado);
 
 //Actualizar a empleado existente
-router.put('/empleados/:id', updateEmpleado);
+router.put('/api/empleados/:id', updateEmpleado);
 
 //Eliminar empleado 
-router.delete('/empleados/:id', deleteEmpleado);
+router.delete('/api/empleados/:id', deleteEmpleado);
 
 export default router;
